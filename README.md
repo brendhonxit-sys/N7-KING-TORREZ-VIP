@@ -1,0 +1,2 @@
+# N7-KING-TORREZ-VIP
+​🛡️ N7 KING TORREZ V6.0 VIP ​Painel de elite em C++ e HTML5 para Android. Interface Black &amp; Red com sistema de login seguro. ​👑 FUNÇÕES VIP: ​Verificado (V) &amp; Level 100 ​Skin Injector (Sakura/Hip Hop) ​AimLock 360° &amp; No Recoil ​Bypass Cerberus Anti-Ban ​Auto-Update via GitHub ​Monetização AdMob integrada. Desenvolvido por @torrez_root. 🚀
