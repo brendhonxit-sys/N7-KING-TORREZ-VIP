@@ -1,0 +1,28 @@
+<div id="update-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; flex-direction:column; text-align:center;">
+    <h1 style="color:var(--gold);">⚠️ ATUALIZAÇÃO DISPONÍVEL!</h1>
+    <p style="color:white; margin:20px;">Uma nova versão do N7 KING TORREZ foi lançada.<br>A versão atual está expirada.</p>
+    <button class="btn" style="width:250px;" onclick="window.open('https://github.com/seu-usuario/n7-king/releases')">BAIXAR V7.0 AGORA</button>
+</div>
+
+<script>
+    const VERSION_ATUAL = "6.0"; // Versão que está no APK
+    const UPDATE_URL = "https://raw.githubusercontent.com/seu-usuario/n7-king/main/update.json";
+
+    function checkUpdates() {
+        console.log("Verificando integridade do sistema N7...");
+        
+        fetch(UPDATE_URL)
+            .then(response => response.json())
+            .then(data => {
+                if (data.version > VERSION_ATUAL) {
+                    document.getElementById('update-modal').style.display = 'flex';
+                    document.getElementById('login-screen').style.display = 'none';
+                    document.getElementById('vip-content').style.display = 'none';
+                }
+            })
+            .catch(err => console.log("Erro ao conectar com servidor de update."));
+    }
+
+    // Chama a verificação assim que o app abre
+    window.onload = checkUpdates;
+</script>
